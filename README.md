@@ -11,7 +11,7 @@
 
 ## Limitations
 - ``multi-saxon`` is optimized for TEI P5 files.
-- Limited customization
+- Limited customization (for now).
 
 ## Upcoming Features
 - A separate config.toml file to increase metadata customization.
