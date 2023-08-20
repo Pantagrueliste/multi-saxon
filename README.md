@@ -1,6 +1,6 @@
 # multisaxon
 
-``multisaxon`` is a tool designed to rapidly transform vast amounts of XML TEI to text. By harnessing the capabilities of the Saxon processor (XSLT 2+) and leveraging multiprocessing, multisaxon offers the high speed XML transformations `lxml` cannot acheive.
+``multisaxon`` is a tool designed to rapidly transform vast amounts of XML TEI to text. By harnessing the capabilities of the Saxon processor (XSLT 2.0+) and leveraging multiprocessing, multisaxon offers high speed XML transformations `lxml` can only acheive with XSLT 1.0.
 
 ## Features
 
