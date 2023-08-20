@@ -12,7 +12,7 @@ from tqdm.contrib.concurrent import process_map
 
 from saxonche import PySaxonProcessor, PyXslt30Processor
 
-logging.basicConfig(filename='errors.log', level=logging.ERROR)
+logging.basicConfig(filename='errors.log', level=logging.INFO)
 
 # global variables
 root_dir = '/Users/clem/Documents/EEBO/'
@@ -80,8 +80,7 @@ def process_files(file_chunk, xslt_content, progress_value):
                 results.append(metadata + [word_count])
                 progress_value.value += 1
 
-                # Update the shared progress value
-                # print(f"Updated Progress Value: {progress.value}")
+                # print(f"Updated Progress Value: {progress.value}") # debug
             except Exception as e:
                 print(f"Error processing {filename}: {e}")
                 logging.error(f"Error processing {filename}: {e}")
@@ -97,11 +96,11 @@ if __name__ == '__main__':
         num_processes = multiprocessing.cpu_count()
         with Manager() as manager:
             progress_value = manager.Value('i', 0)
-
+            done_event = manager.Event()
             pbar = tqdm(total=len(all_files))
 
             def update_progress_bar(progress_value):
-                while True:
+                while not done_event.is_set():
                     pbar.update(progress_value.value - pbar.n)
                     time.sleep(0.5)
 
@@ -117,6 +116,8 @@ if __name__ == '__main__':
             results = pool.map(wrapper, [(chunk, xslt_content, progress_value) for chunk in chunks])
             pool.close()
             pool.join()
+            done_event.set()
+            progress_thread.join()
 
         with open(csv_file_path, 'w', newline='') as file:
             writer = csv.writer(file)
@@ -126,7 +127,11 @@ if __name__ == '__main__':
                     writer.writerow(row)
 
     except KeyboardInterrupt:
-        print("\\nReceived keyboard interrupt. Exiting now...")
+        print("\\nReceived keyboard interrupt.")
+        if 'pool' in locals():
+           pool.terminate()
+           pool.join()
+        print("Exiting now...")
 
     finally:
-        print("May the force be with you.")
+        print("Peace.")
