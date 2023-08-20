@@ -1,7 +1,7 @@
 # multi-saxon
 [![DOI](https://zenodo.org/badge/680835550.svg)](https://zenodo.org/badge/latestdoi/680835550)
 
-``multi-saxon`` swiftly converts large amounts of XML TEI files into text. Harnessing the power of Saxonica's [SaxonC-HE](https://pypi.org/project/saxonche/) processor (XSLT 2.0+), it parallelizes file processing. This approach enables users to circumvent some of the limitations of ``lxml``, which operates exclusively within the XSLT 1.0.
+``multi-saxon`` swiftly converts large amounts of XML TEI files into text. Harnessing the power of Saxonica's [SaxonC-HE](https://pypi.org/project/saxonche/) processor (XSLT 2.0+), it parallelizes file processing. This approach enables users to circumvent some of the limitations of ``lxml``, which despite its many advantages, operates exclusively within the XSLT 1.0 framework.
 
 
 ## Features
