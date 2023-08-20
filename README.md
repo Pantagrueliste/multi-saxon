@@ -1,4 +1,5 @@
 # multi-saxon
+[![DOI](https://zenodo.org/badge/680835550.svg)](https://zenodo.org/badge/latestdoi/680835550)
 
 ``multi-saxon`` is a tool designed to rapidly transform vast amounts of XML TEI files to text. By harnessing the capabilities of Saxonica's [SaxonC-HE](https://pypi.org/project/saxonche/) processor (XSLT 2.0+) and leveraging multiprocessing, multi-saxon offers high speed XML transformations `lxml` can only acheive with XSLT 1.0.
 
