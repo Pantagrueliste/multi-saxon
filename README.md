@@ -14,7 +14,7 @@
 - Limited customization
 
 ## Upcoming Features
-- A separate config.toml file to increase metadata customization. 
+- A separate config.toml file to increase metadata customization.
 
 ## Installation
 
