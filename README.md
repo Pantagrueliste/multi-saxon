@@ -10,7 +10,7 @@
 - **CSV Output**: Generate comprehensive CSV reports containing relevant metadata about the processed XML TEI files.
 
 ## Limitations
-- ``multi-saxon`` is optimized for TEI P5 files.
+- ``multi-saxon`` is optimized for TEI P5 files. I do not plan on extending it to other frameworks.
 - Limited customization (for now).
 
 ## Upcoming Features
