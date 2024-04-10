@@ -1,0 +1,12 @@
+[input]
+directory = "/Users/clem/Documents/EEBO/" # insert url of input directory
+
+[output]
+directory = "/Users/clem/Desktop/EEBOTest4" # insert url of output directory
+metadata_file = "/Users/clem/Desktop/EEBOTest4/metadata/metadata.csv" # insert url and name of your metadata.csv file
+
+[xslt]
+file_path = "/Users/clem/Desktop/EEBOTest4/scripts/transformEEBO.xsl" # insert url of XSLT file
+
+[logging]
+filename = "errors.log" # define name of error log file
