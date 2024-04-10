@@ -8,13 +8,13 @@
 - **Fast Transformations**: Utilize the multiprocessing capabilities of your machine for simultaneous XML transformations.
 - **Saxon Integration**: Seamlessly process XML files using the renowned Saxon processor.
 - **CSV Output**: Generate comprehensive CSV reports containing relevant metadata about the processed XML TEI files.
+- **Limited Logging Capabilities**:  
 
 ## Limitations
 - ``multi-saxon`` is optimized for TEI P5 files. I do not plan on extending it to other frameworks.
-- Limited customization (for now).
 
 ## Upcoming Features
-- A separate config.toml file to increase metadata customization.
+~~- A separate config.toml file to increase metadata customization.~~
 
 ## Installation
 
