@@ -83,11 +83,13 @@ def process_files(file_chunk: list, xslt_content: str, progress_value: multiproc
                 progress_value.value += 1
 
             except ET.ParseError as parse_error:
-                logging.error(f"Error parsing XML file {xml_file_path}: {parse_error}")
+                logging.error(f"XML parsing error in file {xml_file_path}: {parse_error}")
+            except FileNotFoundError as fnf_error:
+                logging.error(f"File not found: {xml_file_path}: {fnf_error}")
             except IOError as io_error:
-                logging.error(f"Error reading or writing file {xml_file_path}: {io_error}")
+                logging.error(f"IO error in file {xml_file_path}: {io_error}")
             except Exception as exception:
-                logging.error(f"Error processing file {xml_file_path}: {exception}")
+                logging.error(f"Unexpected error in file {xml_file_path}: {exception}")
 
     return results
 
