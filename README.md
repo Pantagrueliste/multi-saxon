@@ -13,9 +13,6 @@
 ## Limitations
 - ``multi-saxon`` is optimized for TEI P5 files. I do not plan on extending it to other frameworks.
 
-## Upcoming Features
-~~- A separate config.toml file to increase metadata customization.~~
-
 ## Installation
 
 1. Ensure you have Python 3.x installed on your machine. If not, [download and install Python](https://www.python.org/downloads/).
