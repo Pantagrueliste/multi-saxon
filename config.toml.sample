@@ -1,0 +1,19 @@
+# multi-saxon configuration file
+
+[input]
+directory = "/path/to/xml/files"  # Directory containing XML files to process
+
+[output]
+directory = "/path/to/output"     # Directory to save converted text files
+metadata_file = "/path/to/output/metadata.csv"  # Path to save metadata CSV file
+
+[xslt]
+file_path = "/path/to/transform.xsl"  # XSLT file to use for transformation
+
+[performance]
+max_workers = 0  # Maximum number of worker processes (0 = use all CPU cores)
+batch_size = 100  # Number of files to process in each batch (for memory optimization)
+
+[logging]
+filename = "multi_saxon.log"  # Log file path
+level = "INFO"  # Log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)

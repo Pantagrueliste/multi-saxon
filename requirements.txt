@@ -1,4 +1,4 @@
-saxonc
-tqdm
-multiprocessing
-csv
+saxonche>=0.5.0
+tqdm>=4.64.0
+toml>=0.10.2
+click>=8.1.3
